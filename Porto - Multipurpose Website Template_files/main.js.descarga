@@ -1,0 +1,5 @@
+let cookie=document.getElementById("cookie");function mobileNav(){let navdrop=document.getElementById("navdrop");if(navdrop)navdrop.classList.toggle("hide");}
+function hideCookie(){if(cookie)cookie.classList.add("hide");document.cookie="cookie-notify=hidden; expires=Thu, 18 Dec 2030 12:00:00 UTC";}
+window.addEventListener('load',(event)=>{let cookies=document.cookie.split('; ')
+if(!cookies.includes('cookie-notify=hidden')){if(cookie)cookie.classList.remove("hide");}
+window.onscroll=function(){stickyNav()};let navbar=document.getElementById("nav");function stickyNav(){if(window.scrollY==0){navbar.classList.remove("sticky")}else{navbar.classList.add("sticky")}}});
